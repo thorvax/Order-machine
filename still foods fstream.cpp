@@ -41,7 +41,7 @@ void orderConfirmedtoFile(int &a){
 
         }
 
-void reviewOrdersNameList (){
+void reviewOrdersNameList (int &a){
 
     
 
@@ -80,26 +80,7 @@ void reviewOrdersNameList (){
         short a;
 
         std::cin >> a ;
-        
-        if(a == 1){
-            std::string userFileNameCreator = username + ".txt";
-            std::fstream ordersFileSave;
-            ordersFileSave.open(userFileNameCreator, std::ios::out);
-    
-            if(ordersFileSave.is_open()){
-                for(int i = 0; i < ordersArr.size(); i++){
-                        ordersFileSave << i+1
-                                       << "."
-                                       << ordersArrName[i]
-                                       << "\n";
-                }
-                ordersFileSave  <<"_____________________________\n"
-                                <<"Total Price: "
-                                << sumTotal;
-
-            } else{ std::cout << "File cannot be opened"; }
-
-            ordersFileSave.close();
+        ordersFileSave.close(a);
 
         }
 
