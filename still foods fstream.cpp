@@ -82,8 +82,7 @@ void reviewOrdersNameList (int &a){
         short a;
 
         std::cin >> a ;
-        ordersFileSave.close(a);
-
+        orderConfirmedtoFile(a);
         }
 
         
