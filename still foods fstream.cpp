@@ -42,6 +42,7 @@ void orderConfirmedtoFile(int &a){
             ordersFileSave.close();
 
         }
+}
 
 void reviewOrdersNameList (int &a){
 
@@ -79,16 +80,15 @@ void reviewOrdersNameList (int &a){
                   << "\nTotal: " << sumTotal << "\n";
 
         std::cout <<"Enter 1 to confirm and 0 to go back...\n";
-        short a;
 
         std::cin >> a ;
         orderConfirmedtoFile(a);
         }
 
         
-    }
-
 }
+
+
 
 int main(){
     std::string order;
@@ -170,7 +170,7 @@ int main(){
             
             break;
         case 2:
-            reviewOrdersNameList();
+            reviewOrdersNameList(orderChoices);
             break;
         case 3:
             
