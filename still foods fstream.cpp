@@ -18,6 +18,28 @@ std::vector<std::string> userNameArr;
 
 // "Foods:\n1. Burger \n2. Pizza \n3. Doughnut \n4.Taco \n5.Fried Chicken" << 
 //                 "\n\nDrinks: \n6.Lemonade \n7. Iced Tea \n8.Coke \n9. Sprite 10.\n10.Dr.Pepper"
+void orderConfirmedtoFile(int &a){
+    if(a == 1){
+            std::string userFileNameCreator = username + ".txt";
+            std::fstream ordersFileSave;
+            ordersFileSave.open(userFileNameCreator, std::ios::out);
+    
+            if(ordersFileSave.is_open()){
+                for(int i = 0; i < ordersArr.size(); i++){
+                        ordersFileSave << i+1
+                                       << "."
+                                       << ordersArrName[trash[i]-1]
+                                       << "\n";
+                }
+                ordersFileSave  <<"_____________________________\n"
+                                <<"Total Price: "
+                                << sumTotal;
+
+            } else{ std::cout << "File cannot be opened"; }
+
+            ordersFileSave.close();
+
+        }
 
 void reviewOrdersNameList (){
 
