@@ -6,8 +6,10 @@
     
     
 // I put this here to make the vector accesible to all of the program    
+std::vector<int> trash;
 std::vector<int> ordersArr; // this only stores the orders number like an ID
 std::vector<int> ordersArrTemp;
+int sumTotal;
 std::vector<int> ordersArrID = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 std::vector<std::string> ordersArrName = {"Burger", "Pizza", "Doughnut", "Taco", "Fried Chicken" ,
                                         "Lemonade" , "Iced Tea", "Coke", "Sprite" , "Dr.Pepper"};
